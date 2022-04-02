@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"options": {
+		"cwd": "${workspaceFolder}/build"
+	},
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "cmake",
+			"command":"cmake",
+			"args": [
+				".."
+			]	
+		},
+		{
+			"label": "make",
+			"command":"make",
+			"args": [],
+		},
+		{
+			"label": "exe",
+			"command":"./CANDY",
+			"args": [],
+		},
+		{
+			"label": "Build",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"cmake",
+				"make",
+			],
+		},
+		{
+			"label": "Run",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"cmake",
+				"make",
+				"exe"
+			],
+			"group":{
+				"kind": "build",
+				"isDefault":true,
+			}
+		}
+	]
+}

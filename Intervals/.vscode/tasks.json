@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"options": {
+		"cwd": "build"
+	},
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "cmake",
+			"command":"cmake",
+			"args": [
+				".."
+			]
+		},
+		{
+			"label": "make",
+			"command":"make",
+			"args": [],
+		},
+		{
+			"label": "run",
+			"command":"./main",
+			"args": []
+		},
+		{
+			"label": "BuildAndRun",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"cmake",
+				"make",
+				"run",
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Debug",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"cmake",
+				"make"
+			]
+		}
+	]
+}
