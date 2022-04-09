@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <math.h>
@@ -8,6 +9,7 @@ class SquareNumber
 {
 private:
     int target;
+
 public:
     SquareNumber();
     SquareNumber(int target);

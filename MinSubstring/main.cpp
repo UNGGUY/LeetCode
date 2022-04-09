@@ -5,10 +5,10 @@ using namespace std;
 
 int main()
 {
-    string S="ADOBECODEBANC";
-    string T="ABC";
+    string S = "ADOBECODEBANC";
+    string T = "ABC";
 
-    MinSubstring minSubstring=MinSubstring(S,T);
+    MinSubstring minSubstring = MinSubstring(S, T);
 
     cout << minSubstring.minWindows() << endl;
 }
