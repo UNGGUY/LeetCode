@@ -49,6 +49,7 @@ int MaxIsland::findMaxIsland()
 int MaxIsland::findMaxIslandRe()
 {
     int m = grid.size(), n = m ? grid[0].size() : 0, area = 0;
+    int num = 0;
     for (size_t i = 0; i < m; ++i)
     {
         for (size_t j = 0; j < n; ++j)
@@ -61,6 +62,8 @@ int MaxIsland::findMaxIslandRe()
     }
     return area;
 }
+
+
 
 int MaxIsland::_findMaxIslandRe(int r, int c)
 {
