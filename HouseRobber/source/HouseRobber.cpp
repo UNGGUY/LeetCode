@@ -17,12 +17,11 @@ int HouseRobber::maxMoney()
     }
     int n = nums.size();
     vector<int> dp(n + 1, 0);
-    dp[0] = nums[0];
-    dp[1] = max(nums[0], nums[1]);
+    dp[1] = nums[0];
 
     for (size_t i = 2; i <= n; i++)
     {
-        dp[i] = max(dp[i - 1], nums[i] + dp[i]);
+        dp[i] = max(dp[i - 1], nums[i - 1] + dp[i-2]);
     }
 
     return dp[n];
